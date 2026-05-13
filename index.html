@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nethmi Vihanga Gajaweera | IT Undergraduate Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Nethmi Vihanga Gajaweera, a BIT (Hons) in Network and Mobile Computing undergraduate at Horizon Campus, Sri Lanka.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particle background canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Glow Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>NVG<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-text reveal-left">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Currently Studying · Open to Internships
+                </div>
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">
+                    <span class="first-name">Nethmi Vihanga</span><br>
+                    <span class="last-name gradient-text">Gajaweera</span>
+                </h1>
+                <div class="hero-role">
+                    <span id="type-text"></span><span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-bio">A motivated BIT undergraduate passionate about building smart, impactful
+                    applications that solve real-world problems — from networking solutions to AI-powered systems.</p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/nethmi-vihanga" target="_blank" class="social-icon"
+                        title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:taenethmi1230@gmail.com" class="social-icon" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="tel:+94770124960" class="social-icon" title="Phone">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-section reveal-right">
+                <div class="image-frame">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <img src="my%204to.jpg" alt="Nethmi Vihanga Gajaweera"
+                        class="profile-photo">
+                </div>
+                <!-- Floating cards around the image -->
+                <div class="float-card float-card-1">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="float-card float-card-2">
+                    <i class="fa-brands fa-docker"></i>
+                    <span>Docker</span>
+                </div>
+                <div class="float-card float-card-3">
+                    <i class="fa-brands fa-java"></i>
+                    <span>Java</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <a href="#about" class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </a>
+    </section>
+
+    <!-- ===== STATS SECTION ===== -->
+    <section class="stats-section reveal-up">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Years Studying</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="12">0</span>
+                    <span class="stat-label">Skills Learned</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card glass-card reveal-left">
+                    <div class="card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                    <h3>Background</h3>
+                    <p>A motivated BIT (Hons) in Network and Mobile Computing undergraduate at Horizon Campus with a
+                        strong interest in IT support, networking, software, and QA.</p>
+                </div>
+                <div class="about-card glass-card reveal-up">
+                    <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>Approach</h3>
+                    <p>Possesses a solid foundation in network fundamentals, programming, databases, and cloud concepts
+                        with hands-on experience through academic projects.</p>
+                </div>
+                <div class="about-card glass-card reveal-right">
+                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Goal</h3>
+                    <p>Demonstrates strong problem-solving skills, attention to detail, and a practical approach — eager
+                        to contribute to impactful technology solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            </div>
+
+            <div class="skills-grid reveal-up">
+                <!-- Left column: skill bars -->
+                <div class="skill-bars">
+                    <h3 class="skill-category">Core Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-brands fa-python"></i> Python Programming</span>
+                        <span class="skill-tag"><i class="fa-brands fa-java"></i> Java Development</span>
+                        <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML, CSS & JavaScript</span>
+                        <span class="skill-tag"><i class="fa-solid fa-database"></i> Database & Data Management</span>
+                        <span class="skill-tag"><i class="fa-solid fa-cloud"></i> Cloud Networking Basics</span>
+                        <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> Network Fundamentals</span>
+                    </div>
+                </div>
+
+                <!-- Right column: badge grid -->
+                <div class="skill-badges-wrapper">
+                    <h3 class="skill-category">Professional Skills</h3>
+                    <div class="skill-badges">
+                        <div class="badge glass-card">
+                            <i class="fa-solid fa-check-double"></i>
+                            <span>Quality Assurance</span>
+                        </div>
+                        <div class="badge glass-card">
+                            <i class="fa-solid fa-bug-slash"></i>
+                            <span>Debugging & Problem Solving</span>
+                        </div>
+                        <div class="badge glass-card">
+                            <i class="fa-solid fa-eye"></i>
+                            <span>Attention to Detail</span>
+                        </div>
+                        <div class="badge glass-card">
+                            <i class="fa-solid fa-users-gear"></i>
+                            <span>Team Collaboration</span>
+                        </div>
+                        <div class="badge glass-card">
+                            <i class="fa-solid fa-vial"></i>
+                            <span>Manual Testing Mindset</span>
+                        </div>
+                        <div class="badge glass-card">
+                            <i class="fa-brands fa-docker"></i>
+                            <span>Docker & DevOps Basics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Education & <span class="gradient-text">Courses</span></h2>
+            </div>
+
+            <div class="edu-layout">
+                <!-- Timeline -->
+                <div class="edu-timeline reveal-left">
+                    <h3 class="sub-heading">Academic Qualifications</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="t-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="t-content glass-card">
+                                <span class="t-badge current">Currently Pursuing</span>
+                                <h4>BIT (Hons) in Network and Mobile Computing</h4>
+                                <p class="t-institution"><i class="fa-solid fa-building-columns"></i> Horizon Campus,
+                                    Sri Lanka</p>
+                                <p class="t-desc">Undergraduate degree focusing on networking, mobile computing,
+                                    databases, and software development.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="t-dot"><i class="fa-solid fa-school"></i></div>
+                            <div class="t-content glass-card">
+                                <span class="t-badge passed">2020 · Passed</span>
+                                <h4>G.C.E Advanced Level</h4>
+                                <p class="t-institution"><i class="fa-solid fa-building-columns"></i> Wevita Maithree
+                                    Maha Vidyalaya, Bandaragama</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="t-dot"><i class="fa-solid fa-school"></i></div>
+                            <div class="t-content glass-card">
+                                <span class="t-badge passed">2017 · Passed</span>
+                                <h4>G.C.E Ordinary Level</h4>
+                                <p class="t-institution"><i class="fa-solid fa-building-columns"></i> Royal College,
+                                    Horana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Courses -->
+                <div class="courses-list reveal-right">
+                    <h3 class="sub-heading">Extra Certifications</h3>
+                    <div class="course-cards">
+                        <div class="course-card glass-card">
+                            <div class="course-icon"><i class="fa-solid fa-flask"></i></div>
+                            <div class="course-info">
+                                <h4>Bridging Programme</h4>
+                                <p>SLTC Research University</p>
+                            </div>
+                        </div>
+                        <div class="course-card glass-card">
+                            <div class="course-icon"><i class="fa-solid fa-brain"></i></div>
+                            <div class="course-info">
+                                <h4>AL/ML Engineer (Stage 01 & 02)</h4>
+                                <p>SLIIT University</p>
+                            </div>
+                        </div>
+                        <div class="course-card glass-card">
+                            <div class="course-icon"><i class="fa-solid fa-chart-bar"></i></div>
+                            <div class="course-info">
+                                <h4>Data Cleaning & Visualization</h4>
+                                <p>Kaggle</p>
+                            </div>
+                        </div>
+                        <div class="course-card glass-card">
+                            <div class="course-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="course-info">
+                                <h4>Introduction to Cybersecurity</h4>
+                                <p>Cisco Networking Academy</p>
+                            </div>
+                        </div>
+                        <div class="course-card glass-card">
+                            <div class="course-icon"><i class="fa-brands fa-python"></i></div>
+                            <div class="course-info">
+                                <h4>Python for Beginners</h4>
+                                <p>University of Moratuwa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">What I've Built</span>
+                <h2 class="section-title">Academic <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+
+
+                <div class="project-card featured glass-card reveal-up">
+                    <div class="project-header">
+                        <div class="project-number">01</div>
+                        <span class="project-tag done">Completed</span>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="fitme.png" alt="FitMe App Mockup">
+                    </div>
+                    <div class="project-content">
+                        <h3>FitMe — 3D Tailoring & Collaboration</h3>
+                        <p>A professional-grade 3D tailoring platform with interactive annotation pins for precise customer-tailor communication. Features real-time design iteration and Pro subscription flow.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Firebase</span>
+                            <span>Firestore</span>
+                            <span>3D Studio</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NethmiVihanga/FitMe" target="_blank" class="project-link">
+                                <i class="fa-brands fa-github"></i> View Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up">
+                    <div class="project-header">
+                        <div class="project-number">02</div>
+                        <span class="project-tag ongoing">In Progress</span>
+                    </div>
+                    <div class="project-icon-wrap"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Intelligent Plant Identification System</h3>
+                    <p>Final year project — an integrated agricultural support platform with plant recognition, marketplace, and communication features.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>Web App Design</span>
+                        <span>UI/UX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NethmiVihanga/Plantora-App" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" style="animation-delay: 0.1s">
+                    <div class="project-header">
+                        <div class="project-number">03</div>
+                        <span class="project-tag done">Completed</span>
+                    </div>
+                    <div class="project-icon-wrap"><i class="fa-solid fa-music"></i></div>
+                    <h3>Amee Music — Responsive Web</h3>
+                    <p>A fully responsive artist merchandise and lyrics website with a structured, clean, and modern front-end design.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>RWD</span>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" style="animation-delay: 0.2s">
+                    <div class="project-header">
+                        <div class="project-number">04</div>
+                        <span class="project-tag done">Completed</span>
+                    </div>
+                    <div class="project-icon-wrap"><i class="fa-solid fa-mug-hot"></i></div>
+                    <h3>Cafe Management System</h3>
+                    <p>A Java and web-based system for menu display, order processing, and billing — demonstrating strong programming logic and workflow design.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NethmiVihanga/ITBNM-2211-0130" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" style="animation-delay: 0.3s">
+                    <div class="project-header">
+                        <div class="project-number">05</div>
+                        <span class="project-tag done">Completed</span>
+                    </div>
+                    <div class="project-icon-wrap"><i class="fa-brands fa-docker"></i></div>
+                    <h3>Weather Dashboard Containerisation</h3>
+                    <p>Containerised deployment of a weather dashboard using Docker and Docker Compose showcasing networking architecture and DevOps concepts.</p>
+                    <div class="project-tech">
+                        <span>Docker</span>
+                        <span>Docker Compose</span>
+                        <span>Nginx</span>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NethmiVihanga/WeatherApp_Devops" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT / FOOTER ===== -->
+    <section id="contact" class="contact-section">
+        <div class="contact-bg-text">CONNECT</div>
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Reach Out</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-subtitle">I'm always happy to connect, collaborate, or discuss opportunities!</p>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-cards reveal-left">
+                    <a href="mailto:taenethmi1230@gmail.com" class="contact-item glass-card">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>taenethmi1230@gmail.com</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="tel:+94770124960" class="contact-item glass-card">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+94 77 012 4960</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Munagama, Horana, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/nethmi-vihanga" target="_blank"
+                        class="contact-item glass-card">
+                        <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>nethmi-vihanga</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <div class="references-card glass-card reveal-right">
+                    <h3><i class="fa-solid fa-address-card gradient-text"></i> References</h3>
+                    <div class="ref-entry">
+                        <div class="ref-avatar">NJ</div>
+                        <div>
+                            <strong>Naduni Jayathilake</strong>
+                            <span>Lecturer, Faculty of IT — Horizon Campus</span>
+                            <a href="mailto:naduniji@horizoncampus.edu.lk"><i class="fa-solid fa-envelope"></i>
+                                naduniji@horizoncampus.edu.lk</a>
+                            <a href="tel:0763396331"><i class="fa-solid fa-phone"></i> 0763396331</a>
+                        </div>
+                    </div>
+                    <div class="ref-divider"></div>
+                    <div class="ref-entry">
+                        <div class="ref-avatar">AI</div>
+                        <div>
+                            <strong>Anuradha Ishani</strong>
+                            <span>Lecturer, Faculty of IT — Horizon Campus</span>
+                            <a href="mailto:anuradha@horizoncampus.edu.lk"><i class="fa-solid fa-envelope"></i>
+                                anuradha@horizoncampus.edu.lk</a>
+                            <a href="tel:0716979458"><i class="fa-solid fa-phone"></i> 0716979458</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 <strong>Nethmi Vihanga Gajaweera</strong>. Crafted with <span
+                style="color:#f472b6">&#10084;</span> in Sri Lanka.</p>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top-btn" id="scrollTop" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
