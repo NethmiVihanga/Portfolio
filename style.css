@@ -4,19 +4,19 @@
 
 /* -- DESIGN SYSTEM -- */
 :root {
-    --bg:         #f0f4ff;
-    --bg-2:       #e8edf8;
-    --card:       rgba(255,255,255,0.75);
-    --border:     rgba(99,102,241,0.15);
-    --primary:    #6366f1;
-    --secondary:  #8b5cf6;
-    --accent:     #0891b2;
-    --pink:       #ec4899;
-    --text:       #1e293b;
-    --muted:      #64748b;
-    --light:      #475569;
+    --bg:         #0a0514;
+    --bg-2:       #130b29;
+    --card:       rgba(255, 255, 255, 0.04);
+    --border:     rgba(255, 42, 133, 0.2);
+    --primary:    #ff2a85;
+    --secondary:  #b53cff;
+    --accent:     #00f2fe;
+    --pink:       #ff007f;
+    --text:       #f8f9fa;
+    --muted:      #a1a1aa;
+    --light:      #cbd5e1;
     --radius:     16px;
-    --shadow:     0 8px 32px rgba(99,102,241,0.12);
+    --shadow:     0 8px 32px rgba(255, 42, 133, 0.15);
 }
 
 /* -- RESET -- */
@@ -50,9 +50,9 @@ img { display: block; max-width: 100%; }
     z-index: 0;
     opacity: 0.18;
 }
-.orb-1 { width: 700px; height: 700px; background: var(--secondary); top: -20%; left: -15%; }
-.orb-2 { width: 500px; height: 500px; background: var(--accent);    bottom: -15%; right: -10%; }
-.orb-3 { width: 400px; height: 400px; background: var(--pink);      top: 50%;    left: 50%;  opacity: 0.08; }
+.orb-1 { width: 700px; height: 700px; background: var(--primary); top: -20%; left: -15%; }
+.orb-2 { width: 500px; height: 500px; background: var(--secondary); bottom: -15%; right: -10%; }
+.orb-3 { width: 400px; height: 400px; background: var(--accent); top: 50%; left: 50%; opacity: 0.12; }
 
 /* -- UTIL -- */
 .container    { max-width: 1180px; margin: 0 auto; padding: 0 5%; position: relative; z-index: 1; }
@@ -99,13 +99,13 @@ img { display: block; max-width: 100%; }
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
-    background: rgba(240,244,255,.82);
+    background: rgba(10, 5, 20, .6);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     transition: background .35s;
 }
-.navbar.scrolled { background: rgba(240,244,255,.97); }
+.navbar.scrolled { background: rgba(10, 5, 20, .95); box-shadow: 0 4px 30px rgba(255, 42, 133, 0.2); }
 .nav-container {
     max-width: 1180px;
     margin: 0 auto;
@@ -229,17 +229,18 @@ img { display: block; max-width: 100%; }
     transition: transform .3s, box-shadow .3s;
 }
 .btn-primary {
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
-    box-shadow: 0 4px 20px rgba(99,102,241,.4);
+    box-shadow: 0 4px 20px rgba(255, 42, 133, 0.4);
 }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(99,102,241,.5); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(255, 42, 133, 0.6); }
 .btn-outline {
     background: transparent;
-    border: 1.5px solid var(--border);
+    border: 1.5px solid var(--primary);
     color: var(--text);
+    text-shadow: 0 0 8px rgba(255, 42, 133, 0.3);
 }
-.btn-outline:hover { border-color: var(--primary); background: rgba(99,102,241,.07); }
+.btn-outline:hover { border-color: var(--accent); background: rgba(0, 242, 254, 0.1); box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); }
 
 /* Socials */
 .hero-socials { display: flex; gap: 1rem; }
@@ -294,7 +295,7 @@ img { display: block; max-width: 100%; }
 /* Floating skill badges */
 .float-card {
     position: absolute;
-    background: rgba(240,244,255,.9);
+    background: rgba(19, 11, 41, .8);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: .6rem 1rem;
@@ -304,7 +305,7 @@ img { display: block; max-width: 100%; }
     font-size: .85rem;
     font-weight: 600;
     backdrop-filter: blur(8px);
-    box-shadow: var(--shadow);
+    box-shadow: 0 0 20px rgba(181, 60, 255, 0.2);
     z-index: 2;
 }
 .float-card i { font-size: 1.2rem; }
@@ -413,14 +414,14 @@ img { display: block; max-width: 100%; }
     align-items: center;
     gap: .5rem;
     padding: .55rem 1.1rem;
-    background: rgba(255,255,255,0.75);
+    background: rgba(19, 11, 41, 0.6);
     border: 1px solid var(--border);
     border-radius: 30px;
     font-size: .88rem;
     font-weight: 500;
     color: var(--text);
     backdrop-filter: blur(8px);
-    box-shadow: 0 2px 8px rgba(99,102,241,.08);
+    box-shadow: 0 2px 8px rgba(255, 42, 133, 0.1);
     transition: transform .25s, box-shadow .25s, border-color .25s;
 }
 .skill-tag i {
@@ -527,7 +528,9 @@ img { display: block; max-width: 100%; }
     align-items: center;
     gap: 2.5rem;
     padding: 3rem;
-    background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(240,244,255,0.75));
+    background: linear-gradient(135deg, rgba(19, 11, 41, 0.8), rgba(10, 5, 20, 0.9));
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.1);
 }
 
 .project-image-container {
@@ -605,8 +608,8 @@ img { display: block; max-width: 100%; }
     padding: .3rem .8rem;
     border-radius: 20px;
 }
-.project-tag.ongoing { background: rgba(250,204,21,.1);  color: #facc15; }
-.project-tag.done    { background: rgba(34,197,94,.1);   color: #22c55e; }
+.project-tag.ongoing { background: rgba(255, 42, 133, 0.15);  color: #ff2a85; box-shadow: 0 0 10px rgba(255, 42, 133, 0.2); }
+.project-tag.done    { background: rgba(0, 242, 254, 0.15);   color: #00f2fe; box-shadow: 0 0 10px rgba(0, 242, 254, 0.2); }
 
 .project-icon-wrap {
     width: 56px; height: 56px;
@@ -666,7 +669,6 @@ img { display: block; max-width: 100%; }
     color: var(--text);
 }
 .contact-item:hover { border-color: rgba(99,102,241,.3); }
-.contact-item:last-child { pointer-events: none; }
 .contact-icon {
     width: 46px; height: 46px;
     background: rgba(99,102,241,.1);
@@ -784,7 +786,7 @@ img { display: block; max-width: 100%; }
         display: none;
         position: absolute;
         top: 70px; left: 0; right: 0;
-        background: rgba(240,244,255,.97);
+        background: rgba(10, 5, 20, .98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 1.5rem 5%;
