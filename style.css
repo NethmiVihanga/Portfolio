@@ -800,3 +800,149 @@ img { display: block; max-width: 100%; }
     .nav-menu.open { display: flex; }
     .hamburger { display: flex; }
 }
+
+/* ===== CERTIFICATIONS GALLERY ===== */
+.certifications-section {
+    position: relative;
+    z-index: 2;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cert-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.cert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.cert-card:hover .cert-image img {
+    transform: scale(1.08);
+}
+
+.cert-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 5, 20, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+    gap: 0.5rem;
+}
+
+.cert-overlay i {
+    font-size: 2rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cert-overlay span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.cert-card:hover .cert-overlay {
+    opacity: 1;
+}
+
+.cert-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    flex: 1;
+}
+
+.cert-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cert-content p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* PDF Card specific styles */
+.cert-pdf-card .cert-pdf-icon {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.2) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-pdf-card .cert-pdf-icon i {
+    font-size: 5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+    transition: transform 0.4s ease;
+}
+
+.cert-pdf-card:hover .cert-pdf-icon i {
+    transform: scale(1.1) translateY(-5px);
+}
+
+.cert-pdf-card .btn-sm {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 0.4rem 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.3s ease;
+}
+
+.cert-pdf-card:hover .btn-sm {
+    background: var(--primary);
+    color: #fff;
+}
