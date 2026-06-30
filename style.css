@@ -516,8 +516,8 @@ img { display: block; max-width: 100%; }
 .projects-section { background: var(--bg-2); }
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
 }
 .project-card { padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1rem; position: relative; overflow: hidden; }
 
