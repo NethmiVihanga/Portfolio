@@ -760,7 +760,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 1024px) {
     .about-grid     { grid-template-columns: 1fr 1fr; }
     .skills-grid    { grid-template-columns: 1fr; gap: 3rem; }
-    .projects-grid  { grid-template-columns: 1fr; }
+    .projects-grid  { grid-template-columns: repeat(2, 1fr); }
     .project-card.featured { grid-column: span 1; flex-direction: column; padding: 2.5rem 2rem; }
     .project-image-container { flex: auto; width: 100%; height: 200px; }
     .edu-layout     { grid-template-columns: 1fr; }
